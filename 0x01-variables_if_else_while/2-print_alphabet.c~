@@ -1,0 +1,18 @@
+#include <studio.h>
+
+/**
+ *main - print alphabet in lower cases
+ * followed by a new line
+ *Return 0 always
+ */
+int main(void)
+{
+char x;
+
+for (x = 'a'; x <= 'z'; x++);
+{
+putchar(x);
+}
+putchar('\n');
+return (0);
+}
