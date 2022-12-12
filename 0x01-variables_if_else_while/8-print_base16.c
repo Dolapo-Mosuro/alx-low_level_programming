@@ -7,9 +7,16 @@
  */
 int main(void)
 {
-for (int i = 0; i < 16; i++)
+int n;
+char ch;
+
+for (n = 48; n < 58; n++)
 {
-putchar(i < 10 ? '0' + i : 'a' + i - 10);
+putchar(n);
+}
+for (ch = 'a'; ch <= 'f'; ch++)
+{
+putchar(ch);
 }
 putchar('\n');
 return (0);
