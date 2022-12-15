@@ -1,47 +1,43 @@
 #include "main.h"
 
 /**
- * print_times_table - prints the n times table, starting with 0
- * @n: number of the times table
+ * print_times_table - function that print the n times table, starting with 0
+ *
+ * @n: integer that user put to call the function
  */
+
 void print_times_table(int n)
 {
-int i, j, k;
+int i, j, aff, cent;
 
 if (n >= 0 && n <= 15)
 {
 for (i = 0; i <= n; i++)
 {
-for (j = 0; j <= n; j++)
-{
-k = j * i;
-if (j == 0)
-{
-_putchar(k + '0');
-}
-else if (k < 10 && j != 0)
+_putchar('0');
+for (j = 1; j <= n; j++)
 {
 _putchar(',');
 _putchar(' ');
-_putchar(' ');
-_putchar(' ');
-_putchar(k + '0');
-}
-else if (k >= 10 && k < 100)
+aff = j * i;
+if (aff < 10)
 {
-_putchar(',');
 _putchar(' ');
 _putchar(' ');
-_putchar((k / 10) + '0');
-_putchar((k % 10) + '0');
+_putchar((aff % 10) + '0');
 }
-else if (k >= 100)
+else if (aff >= 10 && aff < 100)
 {
-_putchar(',');
 _putchar(' ');
-_putchar((k / 100) + '0');
-_putchar(((k / 10) % 10) + '0');
-_putchar((k % 10) + '0');
+_putchar((aff / 10) + '0');
+_putchar((aff % 10) + '0');
+}
+else
+{
+cent = ((aff / 10) % 10);
+_putchar((aff / 100) + '0');
+_putchar(cent + '0');
+_putchar((aff % 10) + '0');
 }
 }
 _putchar('\n');
