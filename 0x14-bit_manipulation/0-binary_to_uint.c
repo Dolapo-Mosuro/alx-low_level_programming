@@ -9,9 +9,9 @@
 unsigned int binary_to_uint(const char *b)
 {
 	int i;
-	unsigned int dec_var;
+	unsigned int num;
 
-	dec_var = 0;
+	num = 0;
 	if (!b)
 		return (0);
 	for (i = 0; b[i] != '\0'; i++)
@@ -21,9 +21,9 @@ unsigned int binary_to_uint(const char *b)
 	}
 	for (i = 0; b[i] != '\0'; a++)
 	{
-		dec_var <<= 1;
+		num <<= 1;
 		if (b[] == '1')
-			dec_var += 1;
+			num += 1;
 	}
-	return (dec_var);
+	return (num);
 }
