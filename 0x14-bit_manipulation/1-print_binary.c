@@ -1,26 +1,27 @@
 #include "main.h"
+#include <stdio.h>
 
 /**
- * _pow - function calculate the (base ^ power)
+ * _pow - calculates (base ^ power)
  * @base: base of the exponent
- * @power: the power of the exponent
+ * @power: power of the exponent
  *
  * Return: value of (base ^ power)
  */
 unsigned long int _pow(unsigned int base, unsigned int power)
 {
 unsigned long int num;
-unsigned int a;
+unsigned int i;
 
 num = 1;
-for (a = 1; a <= power; a++)
+for (i = 1; i <= power; i++)
 num *= base;
 return (num);
 }
 
 /**
- * print_binary - print a number in binary notations
- * @n: number is to print
+ * print_binary - prints a number in binary notation
+ * @n: number to print
  *
  * Return: void
  */
@@ -38,7 +39,7 @@ if (check == divisor)
 {
 flag = 1;
 _putchar('1');
-}
+		}
 else if (flag == 1 || divisor == 1)
 {
 _putchar('0');
