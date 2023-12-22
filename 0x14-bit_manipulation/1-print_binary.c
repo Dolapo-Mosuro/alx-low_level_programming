@@ -2,7 +2,7 @@
 #include <stdio.h>
 
 /**
- * _pow - calculates (base ^ power)
+ * _pow - func calculates (base ^ power)
  * @base: base of the exponent
  * @power: power of the exponent
  *
@@ -11,10 +11,10 @@
 unsigned long int _pow(unsigned int base, unsigned int power)
 {
 unsigned long int num;
-unsigned int i;
+unsigned int a;
 
 num = 1;
-for (i = 1; i <= power; i++)
+for (a = 1; a <= power; a++)
 num *= base;
 return (num);
 }
@@ -38,11 +38,11 @@ check = n & divisor;
 if (check == divisor)
 {
 flag = 1;
-_putchar('1');
-		}
+putchar('1');
+}
 else if (flag == 1 || divisor == 1)
 {
-_putchar('0');
+putchar('0');
 }
 divisor >>= 1;
 }
